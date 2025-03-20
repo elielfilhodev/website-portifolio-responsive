@@ -409,11 +409,12 @@ footer ul li a {
 }
 
 @media(max-width:600px){
-    header #menu-icon{
+    #menu-icon{
         display: block;
     }
 
     .nav-links{
+        display: none;
         position: absolute;
         top: 100%;
         margin-top: 1rem;
