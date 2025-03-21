@@ -1,6 +1,15 @@
-const menuIcon = document.querySelector('#menu-icon');
-const navLinks = document.querySelector('.nav-links');
+document.addEventListener('DOMContentLoaded', function() {
+    const menuIcon = document.getElementById('menu-icon');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = navLinks.querySelectorAll('li');
 
-menuIcon.onclick = () => {
-    navLinks.classList.toggle('active'); // Alterna a classe 'active'
-}
+    menuIcon.addEventListener('click', function() {
+        navLinks.classList.toggle('active');
+    });
+
+    navItems.forEach(item => {
+        item.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+        });
+    });
+});
